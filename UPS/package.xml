@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<package version="2.0" xmlns="http://pear.php.net/dtd/package-2.0"
+    xmlns:tasks="http://pear.php.net/dtd/tasks-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd"
+>
+	<name>Services_Shipping_Driver_UPS</name>
+	<channel>pear.php.net</channel>
+	<summary>A driver for shipping services with United Parcel Services (UPS) (TM).</summary>
+	
+	<description>
+		A driver for shipping services with United Parcel Services (UPS) (TM). This package is
+		not developed by UPS. This package uses XML and HTTP(S) to communicate with the
+		UPS OnLine Tool XML APIs. You must have a valid development or production account
+		with UPS to use this package.
+	</description>
+	
+	<lead>
+		<name>Kristopher Ives</name>
+		<user>nullmind</user>
+		<email>kristopher.ives@gmail.com</email>
+		<active>yes</active>
+	</lead>
+	
+	<date>2008-08-30</date>
+	<time>05:47:00</time>
+	
+	<version>
+		<release>0.0.7</release>
+		<api>0.0.7</api>
+	</version>
+	
+	<stability>
+		<release>devel</release>
+		<api>alpha</api>
+	</stability>
+	
+	<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+	
+	<notes>
+		This is the first release as a draft.
+	</notes>
+		
+	<contents>
+		<dir name="/" baseinstalldir="Services/Shipping">
+			<file role="php" name="UPS.php" />
+			
+			<dir name="/" baseinstalldir="Services/Shipping/UPS">
+				<file role="php" name="Address.php"/>
+				<file role="php" name="Carrier.php"/>
+				<file role="php" name="Letter.php"/>
+				<file role="php" name="Package.php"/>
+				<file role="php" name="Parcel.php"/>
+				<file role="php" name="Party.php"/>
+				<file role="php" name="Shipment.php"/>
+				<file role="php" name="ShipmentEstimate.php"/>
+				<file role="php" name="ShipmentLabel.php"/>
+				<file role="php" name="ShipmentReceipt.php"/>
+				<file role="php" name="ShipmentTracking.php"/>
+				<file role="php" name="Features.php"/>
+			</dir>
+		</dir>
+
+	</contents>
+	
+	<!-- TODO set proper domxml deps -->
+	<dependencies>
+		<required>
+			<php>
+				<min>5.0.0</min>
+			</php>
+			
+			<pearinstaller>
+				<min>1.4.0</min>
+			</pearinstaller>
+			
+			<package>
+				<name>Services_Shipping_XML</name>
+				<channel>pear.php.net</channel>
+				<min>0.0.7</min>
+			</package>
+		</required>
+	</dependencies>
+	
+	<phprelease>
+		
+	</phprelease>
+	
+	<changelog>
+		<release>
+			<version>
+				<release>0.0.7</release>
+				<api>0.0.7</api>
+			</version>
+			
+			<stability>
+				<release>devel</release>
+				<api>alpha</api>
+			</stability>
+			
+			<date>2008-08-23</date>
+			<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+			<notes>
+				* API catchup push to 0.0.7
+			</notes>
+		</release>
+		
+		<release>
+			<version>
+				<release>0.0.6</release>
+				<api>0.0.5</api>
+			</version>
+			
+			<stability>
+				<release>devel</release>
+				<api>alpha</api>
+			</stability>
+			
+			<date>2008-08-03</date>
+			<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+			<notes>
+				* Added support for label generation.
+				* Updated base XML class.
+				* Updated constructors to __construct
+				* Migrated updates from the API change in Services_Shipping
+				* API push to 0.0.5 along with Services_Shipping_XML
+			</notes>
+		</release>
+		
+		<release>
+			<version>
+				<release>0.0.5</release>
+				<api>0.0.4</api>
+			</version>
+			
+			<stability>
+				<release>devel</release>
+				<api>alpha</api>
+			</stability>
+			
+			<date>2008-07-26</date>
+			<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+			<notes>
+				* Initial release and formatting for PEAR
+				* Rate Estimation support from Carrier::quote()
+			</notes>
+		</release>
+	</changelog>
+</package>

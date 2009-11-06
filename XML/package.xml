@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<package version="2.0" xmlns="http://pear.php.net/dtd/package-2.0"
+    xmlns:tasks="http://pear.php.net/dtd/tasks-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd"
+>
+	<name>Services_Shipping_XML</name>
+	<channel>pear.php.net</channel>
+	<summary>An abstract implementation for XML-based shipping carriers.</summary>
+	
+	<description>
+		This package provides a common set of XML classes for implementing a
+		carrier for Services_Shipping.
+	</description>
+	
+	<lead>
+		<name>Kristopher Ives</name>
+		<user>nullmind</user>
+		<email>kristopher.ives@gmail.com</email>
+		<active>yes</active>
+	</lead>
+	
+	<date>2008-08-30</date>
+	<time>05:47:00</time>
+	
+	<version>
+		<release>0.0.7</release>
+		<api>0.0.7</api>
+	</version>
+	
+	<stability>
+		<release>devel</release>
+		<api>alpha</api>
+	</stability>
+	
+	<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+	
+	<notes>
+		This is the first release as a draft.
+	</notes>
+		
+	<contents>
+		<dir name="/" baseinstalldir="Services/Shipping">
+			<file role="php" name="XML.php" />
+			
+			<dir name="/" baseinstalldir="Services/Shipping/XML">
+				<file role="php" name="Address.php"/>
+				<file role="php" name="Carrier.php"/>
+				<file role="php" name="Letter.php"/>
+				<file role="php" name="Package.php"/>
+				<file role="php" name="Parcel.php"/>
+				<file role="php" name="Party.php"/>
+				<file role="php" name="Shipment.php"/>
+				<file role="php" name="ShipmentEstimate.php"/>
+				<file role="php" name="ShipmentLabel.php"/>
+				<file role="php" name="ShipmentReceipt.php"/>
+				<file role="php" name="ShipmentTracking.php"/>
+				<file role="php" name="Source.php"/>
+			</dir>
+		</dir>
+
+	</contents>
+	
+	<!-- TODO set proper domxml deps -->
+	<dependencies>
+		<required>
+			<php>
+				<min>5.0.0</min>
+			</php>
+			
+			<pearinstaller>
+				<min>1.4.0</min>
+			</pearinstaller>
+			
+			<package>
+				<name>Services_Shipping</name>
+				<channel>pear.php.net</channel>
+				<min>0.0.7</min>
+			</package>
+		</required>
+	</dependencies>
+	
+	<phprelease>
+		
+	</phprelease>
+	
+	<changelog>
+		<release>
+			<version>
+				<release>0.0.7</release>
+				<api>0.0.7</api>
+			</version>
+			
+			<stability>
+				<release>devel</release>
+				<api>alpha</api>
+			</stability>
+			
+			<date>2008-08-23</date>
+			<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+			<notes>
+				* API catchup push to 0.0.7
+				* Used self in many areas, cut down on long class names
+			</notes>
+		</release>
+		
+		<release>
+			<version>
+				<release>0.0.6</release>
+				<api>0.0.5</api>
+			</version>
+			
+			<stability>
+				<release>devel</release>
+				<api>alpha</api>
+			</stability>
+			
+			<date>2008-08-03</date>
+			<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+			<notes>
+				* Updated base XML class.
+				* Updated constructors to __construct
+				* Migrated updates from the API change in Services_Shipping
+				* API push to 0.0.5 along with Services_Shipping
+			</notes>
+		</release>
+		
+		<release>
+			<version>
+				<release>0.0.5</release>
+				<api>0.0.4</api>
+			</version>
+			
+			<stability>
+				<release>devel</release>
+				<api>alpha</api>
+			</stability>
+			
+			<date>2008-07-26</date>
+			<license uri="http://www.santiance.com/Services_Shipping/license.txt">BSD</license>
+			<notes>
+				* Initial release and formatting for PEAR
+			</notes>
+		</release>
+	</changelog>
+</package>
